@@ -127,6 +127,8 @@ public class MainActivity extends AppCompatActivity {
                             Profile profile = new Profile(name, email, bloodGroup, weight, password, phone, batch, district);
                             reference.child(phone).setValue(profile);
                             Toast.makeText(MainActivity.this, "Successfully Registered", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(MainActivity.this, Login.class));
+
                         }
                     /*
                     Checking if any field is empty or not when user press the register button
@@ -145,10 +147,12 @@ public class MainActivity extends AppCompatActivity {
                     {
                         Toast.makeText(MainActivity.this, "Weight Must be Above 50 KG", Toast.LENGTH_SHORT).show();
                     }
+
+
                 }
 
 
-            
+
         });
 
         btnSearch.setOnClickListener(new View.OnClickListener()

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/cut_card"
+    android:background="@drawable/cut_card_bg_2"
     tools:context=".MainActivity">
 
     <TextView

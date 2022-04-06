@@ -29,6 +29,8 @@ public class Profile {
      * Puts Contact Number of the Donor interested for the registration into the DB
      */
     String phone;
+    String batch;
+    String district;
 
     /**
      * Empty Constructor
@@ -45,13 +47,15 @@ public class Profile {
      * @param password   Password of the Donor
      * @param phone      ContactNumber of the Donor
      */
-    public Profile(String name, String email, String bloodGroup,String weight, String password, String phone) {
+    public Profile(String name, String email, String bloodGroup,String weight, String password, String phone,String batch,String district) {
         this.name = name;
         this.email = email;
         this.bloodGroup = bloodGroup;
         this.weight=weight;
         this.password = password;
         this.phone = phone;
+        this.batch=batch;
+        this.district=district;
     }
 
     /**
@@ -147,6 +151,22 @@ public class Profile {
      */
     public String getPhone() {
         return phone;
+    }
+
+    public String getBatch() {
+        return batch;
+    }
+
+    public void setBatch(String batch) {
+        this.batch = batch;
+    }
+
+    public String getDistrict() {
+        return district;
+    }
+
+    public void setDistrict(String district) {
+        this.district = district;
     }
 
     /**

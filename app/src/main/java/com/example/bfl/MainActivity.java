@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Button For Confirming SignUp
      */
+    EditText etBatch,etDistrict;
     Button btnRegister;
     /**
      * Button For Activating Login Page
@@ -80,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.activity_main_et_email);
         etPassword = findViewById(R.id.activity_main_et_password);
         etPhone = findViewById(R.id.activity_main_et_phonenumber);
+        etBatch=findViewById(R.id.activity_main_et_batch);
+        etDistrict=findViewById(R.id.activity_main_et_district);
         btnSearch = findViewById(R.id.activity_main_btn_search);
         btnRegister = findViewById(R.id.activity_main_btn_register);
         btnLogin = findViewById(R.id.activity_main_btn_login);
@@ -108,6 +111,9 @@ public class MainActivity extends AppCompatActivity {
                 String email = etEmail.getText().toString();
                 String password = etPassword.getText().toString();
                 String phone = etPhone.getText().toString();
+                String batch = etBatch.getText().toString();
+                String district = etDistrict.getText().toString();
+
                 Integer weightInteger = Integer.valueOf(weight);
 
 
@@ -117,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
                 if (weightInteger > 50) {
                     if (name.length() != 0 && password.length() != 0 && acvBloodGroup.length() != 0 && email.length() != 0) {
 
-                        Profile profile = new Profile(name, email, bloodGroup, weight, password, phone);
+                        Profile profile = new Profile(name, email, bloodGroup, weight, password, phone,batch,district);
                         reference.child(phone).setValue(profile);
                         Toast.makeText(MainActivity.this, "Successfully Registered", Toast.LENGTH_SHORT).show();
                     }

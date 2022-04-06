@@ -70,6 +70,22 @@
 
         />
 
+    <EditText
+        android:id="@+id/activity_main_et_batch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Batch"
+
+
+        />
+
+    <EditText
+        android:id="@+id/activity_main_et_district"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Current District"
+        />
+
     <Button
         android:id="@+id/activity_main_btn_register"
         android:layout_width="match_parent"

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cut_card"
+    tools:context=".Search">
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search By BloodGroup"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:gravity="center"
+        />
+    <AutoCompleteTextView
+        android:id="@+id/activity_search_acv_autocomplete"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        >
+
+    </AutoCompleteTextView>
+
+    <ListView
+        android:id="@+id/activity_search_lv_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="100dp"
+        >
+
+    </ListView>
+
+</RelativeLayout>

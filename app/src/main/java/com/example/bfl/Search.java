@@ -134,8 +134,8 @@ public class Search extends AppCompatActivity {
                 if(snapshot.exists()){
                  ArrayList<String> listUser= new ArrayList<>();
                   for(DataSnapshot ds:snapshot.getChildren())  {
-                      Profile user=new Profile(ds.child("name").getValue(String.class),ds.child("bloodGroup").getValue(String.class),ds.child("phone").getValue(String.class),ds.child("email").getValue(String.class),ds.child("weight").getValue(String.class));
-                      listUser.add(user.getName()+"\n"+user.getBloodGroup()+"\n"+user.getPhone()+"\n"+user.getEmail()+"\n"+user.getWeight());
+                      Profile user=new Profile(ds.child("name").getValue(String.class),ds.child("bloodGroup").getValue(String.class),ds.child("phone").getValue(String.class),ds.child("email").getValue(String.class),ds.child("batch").getValue(String.class),ds.child("district").getValue(String.class));
+                      listUser.add("Name: "+user.getName()+"\n"+"Bloodgroup: "+user.getBloodGroup()+"\n"+"Contact No: "+user.getPhone()+"\n"+"Email: "+user.getEmail()+"\n"+"Batch: "+user.getBatch()+"\n"+"District: "+user.getDistrict());
                   }
                   ArrayAdapter adapter=new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1,listUser);
                   listData.setAdapter(adapter);

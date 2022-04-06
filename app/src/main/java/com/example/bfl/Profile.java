@@ -66,12 +66,14 @@ public class Profile {
      * @param email Email of the Donor
      * @param weight Weight of the donor
      */
-    public Profile(String name, String bloodGroup, String phone, String email,String weight) {
+    public Profile(String name, String bloodGroup, String phone, String email,String batch,String district) {
         this.name = name;
         this.email = email;
         this.bloodGroup = bloodGroup;
-        this.weight=weight;
+        //this.weight=weight;
         this.phone = phone;
+        this.batch=batch;
+        this.district=district;
     }
 
     /**

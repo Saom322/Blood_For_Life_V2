@@ -120,31 +120,35 @@ public class MainActivity extends AppCompatActivity {
                 /*
                  *condition checking if user is of suitable weight( 50 Kgs in this context)
                  */
-                if (weightInteger > 50) {
-                    if (name.length() != 0 && password.length() != 0 && acvBloodGroup.length() != 0 && email.length() != 0) {
 
-                        Profile profile = new Profile(name, email, bloodGroup, weight, password, phone,batch,district);
-                        reference.child(phone).setValue(profile);
-                        Toast.makeText(MainActivity.this, "Successfully Registered", Toast.LENGTH_SHORT).show();
-                    }
+                    if (weightInteger > 50) {
+                        if (name.length() != 0 && password.length() != 0 && acvBloodGroup.length() != 0 && email.length() != 0) {
+
+                            Profile profile = new Profile(name, email, bloodGroup, weight, password, phone, batch, district);
+                            reference.child(phone).setValue(profile);
+                            Toast.makeText(MainActivity.this, "Successfully Registered", Toast.LENGTH_SHORT).show();
+                        }
                     /*
                     Checking if any field is empty or not when user press the register button
                      */
-                    else {
-                        Toast.makeText(MainActivity.this, "Some Fields are Empty", Toast.LENGTH_SHORT).show();
+                        else if (name.length() == 0 || password.length() == 0 || acvBloodGroup.length() == 0 || email.length() == 0 || batch.length() == 0 || phone.length() == 0 || email.length() == 0 || batch.length() == 0) {
+                            Toast.makeText(MainActivity.this, "Some Fields are Empty", Toast.LENGTH_SHORT).show();
+                        }
                     }
-                }
+
+
                 /*
                 if User is Under 50 Kgs in Weight then a toast will be shown
                  */
-                else
+                    else
 
-                {
-                    Toast.makeText(MainActivity.this, "Weight Must be Above 50 KG", Toast.LENGTH_SHORT).show();
+                    {
+                        Toast.makeText(MainActivity.this, "Weight Must be Above 50 KG", Toast.LENGTH_SHORT).show();
+                    }
                 }
 
 
-            }
+            
         });
 
         btnSearch.setOnClickListener(new View.OnClickListener()
